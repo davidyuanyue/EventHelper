@@ -47,22 +47,6 @@ public class IntervalTree {
     }
 
     public List<Interval> getConflict(Interval intervalToCheck) {
-        /*
-        List<Interval> conflicts = new LinkedList<>();
-        IntervalTreeNode maybeIntersectNode = root;
-        while (maybeIntersectNode != null) {
-            if (maybeIntersectNode.getValue().isIntersect(intervalToCheck)) {
-                conflicts.add(maybeIntersectNode.getValue());
-                //return Optional.of(maybeIntersectNode.getValue());
-            } else if (maybeIntersectNode.getLeft() == null) {
-                maybeIntersectNode = maybeIntersectNode.getRight();
-            } else if (maybeIntersectNode.getLeft().getMax() < intervalToCheck.getStart()){
-                maybeIntersectNode = maybeIntersectNode.getRight();
-            } else {
-                maybeIntersectNode = maybeIntersectNode.getLeft();
-            }
-        }
-        return conflicts;*/
         List<Interval> conflicts = new LinkedList<>();
         System.out.println(intervalToCheck.toString());
         getConflictRecursive(intervalToCheck, conflicts, root);

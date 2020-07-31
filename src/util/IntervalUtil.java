@@ -14,8 +14,6 @@ public class IntervalUtil {
         for (Interval interval : intervals) {
 
             List<Interval> conflictsForTheInterval = intervalTree.getConflict(interval);
-            //System.out.println(interval);
-            //System.out.println(conflictsForTheInterval);
             for (Interval conflictingInterval: conflictsForTheInterval) {
                 List<Interval> conflictPair = new LinkedList<>();
                 conflictPair.add(interval);
